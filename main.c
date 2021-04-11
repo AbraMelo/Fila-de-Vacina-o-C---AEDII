@@ -10,6 +10,8 @@ Sistema para gerenciar uma Fila de Pessoas
  - Enfileirar, Desenfileirar, Exibir, Tamanho
 */
 
+
+
 int menu(){
   int opcao = 0;
   printf("\n =====> Fila de Vacinação  <=====\n");
@@ -57,7 +59,7 @@ void perguntas(Pessoa *p){
     else{
       resposta=0;
       while(resposta!=1 && resposta!=2){
-        printf(" Você é morador de rua, quilombola, possui deficiência, preso ou trabalha em algum serviço considerado essencial? \nServiços Essenciais:\n- Professores\n- Forças de segurança\n- Funcionários  do Sistema prisional  \n Digite: \n 1 - Sim \n 2 - Não \n");
+        printf(" Você é morador de rua, quilombola, possui deficiência, pessoa privada de liberdade ou trabalha em algum serviço considerado essencial? \nServiços Essenciais:\n- Professores\n- Forças de segurança\n- Funcionários  do Sistema prisional  \n Digite: \n 1 - Sim \n 2 - Não \n");
         scanf("%i", &resposta);
       }
       if(resposta==1){
