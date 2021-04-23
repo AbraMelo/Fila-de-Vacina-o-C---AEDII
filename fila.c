@@ -44,18 +44,22 @@ void print_fila(Fila *f){
 
   Celula *tmp = f->inicio->prox;
 
-  printf("\n"
+  
   while(tmp != NULL){
     print_pessoa(tmp->dado);
     tmp = tmp->prox;
   }
 }
 
-void print_posfila(Fila *f, Pessoa p){
+void print_posfila(Fila *f){
 
   Celula *tmp = f->inicio->prox;
 
-  while(tmp != NULL){
+  char nome[];
+  printf("Insira o nome\n");
+  scanf("%s", nome);
+
+  while(tmp != p.nome){
     print_pessoa(tmp->dado);
     tmp = tmp->prox;
   }
