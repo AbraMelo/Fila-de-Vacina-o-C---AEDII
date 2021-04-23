@@ -20,7 +20,7 @@ void new_fila(Fila *f){
 }
 //========================================
 void enqueue(Fila *f, Pessoa dado){
-  Celula *temp=f->inicio->prox;
+  Celula *temp=f->inicio;
   Celula *nova = new_celula();
   nova->dado = dado;
   if(dado.prioridade==5){ 
@@ -60,10 +60,13 @@ void print_posfila(Fila *f){
   printf("Insira o nome\n");
   scanf("%s", nome);
 
+  int cont=0;
+
   while(tmp->dado->nome != nome){
-    print_pessoa(tmp->dado);
-    tmp = tmp->prox;
+    cont++;
   }
+
+  printf("Sua posicao na fila: \n", cont);
 }
 ******************************************/
 
