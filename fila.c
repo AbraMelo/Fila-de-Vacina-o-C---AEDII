@@ -20,20 +20,22 @@ void new_fila(Fila *f){
 }
 //========================================
 void enqueue(Fila *f, Pessoa dado){
-  Celula *temp=f->inicio;
+  Celula *ant = f->inicio;
+  Celula *temp=f->inicio->prox;
   Celula *nova = new_celula();
   nova->dado = dado;
-  if(dado.prioridade==1){ 
+  if(dado.prioridade==5){ 
     f->fim->prox = nova;
     f->fim = nova;
     f->tam++;
   }
   else{
-    while(dado.prioridade<=temp->dado.prioridade){
+    while(temp!=NULL &&   temp->dado.prioridade <= dado.prioridade ){
+      ant=ant->prox;
       temp=temp->prox;
     }
-    nova->prox=temp->prox;
-    temp->prox=nova;
+    nova->prox=temp;
+    ant->prox=nova;
     f->tam++;
 
   }
@@ -50,6 +52,21 @@ void print_fila(Fila *f){
     tmp = tmp->prox;
   }
 }
+
+void print_fila_especifica(Fila *f, int p){
+
+  Celula *tmp = f->inicio->prox;
+ while(tmp!=NULL &&   tmp->dado.prioridade < p ){
+      tmp=tmp->prox;
+    }
+  
+  while(tmp != NULL && tmp->dado.prioridade==p){
+    print_pessoa(tmp->dado);
+    tmp = tmp->prox;
+  }
+}
+
+
 
 /*************************************
 void print_posfila(Fila *f){
@@ -74,6 +91,8 @@ void print_posfila(Fila *f){
 int size_fila(Fila *f){
   return f->tam;
 }
+
+
 //========================================
 Pessoa dequeue(Fila *f){
 

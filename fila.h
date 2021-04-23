@@ -31,6 +31,8 @@ void enqueue(Fila *f, Pessoa dado);
 //========================================
 void print_fila(Fila *f);
 //========================================
+void print_fila_especifica(Fila *f, int p);
+//========================================
 int size_fila(Fila *f);
 //========================================
 Pessoa dequeue(Fila *f);

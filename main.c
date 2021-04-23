@@ -42,10 +42,10 @@ void perguntas(Pessoa *p){
     scanf("%i", &resposta);
   }
   if(resposta==1 || p->idade>=75){
-    p->prioridade=5;
+    p->prioridade=1;
   }
   else if(p->idade>60 && p->idade<75){
-    p->prioridade=4;
+    p->prioridade=2;
   }
   else{
     resposta=0;
@@ -63,10 +63,10 @@ void perguntas(Pessoa *p){
         scanf("%i", &resposta);
       }
       if(resposta==1){
-        p->prioridade=2;
+        p->prioridade=4;
       }
       else{
-        p->prioridade=1;
+        p->prioridade=5;
       }
     }
   }
@@ -114,23 +114,23 @@ int main(void) {
       break;
 
       case 4: 
-        print_fila(&fila1);
+        print_fila_especifica(&fila1,1);
       break;
       
       case 5: 
-//        print_fila(&fila2);
+        print_fila_especifica(&fila1,2);
       break;
 
       case 6: 
-        //print_fila(&fila3);
+        print_fila_especifica(&fila1,3);
       break;
 
       case 7: 
-//        print_fila(&fila4);
+        print_fila_especifica(&fila1,4);
       break;
 
       case 8: 
-//        print_fila(&fila5);
+        print_fila_especifica(&fila1,5);
       break;
 
     }
