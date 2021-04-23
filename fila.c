@@ -23,13 +23,13 @@ void enqueue(Fila *f, Pessoa dado){
   Celula *temp=f->inicio;
   Celula *nova = new_celula();
   nova->dado = dado;
-  if(dado.prioridade==5){ 
+  if(dado.prioridade==1){ 
     f->fim->prox = nova;
     f->fim = nova;
     f->tam++;
   }
   else{
-    while(dado.prioridade>=temp->dado.prioridade){
+    while(dado.prioridade<=temp->dado.prioridade){
       temp=temp->prox;
     }
     nova->prox=temp->prox;

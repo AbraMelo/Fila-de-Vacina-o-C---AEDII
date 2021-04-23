@@ -42,10 +42,10 @@ void perguntas(Pessoa *p){
     scanf("%i", &resposta);
   }
   if(resposta==1 || p->idade>=75){
-    p->prioridade=1;
+    p->prioridade=5;
   }
   else if(p->idade>60 && p->idade<75){
-    p->prioridade=2;
+    p->prioridade=4;
   }
   else{
     resposta=0;
@@ -63,10 +63,10 @@ void perguntas(Pessoa *p){
         scanf("%i", &resposta);
       }
       if(resposta==1){
-        p->prioridade=4;
+        p->prioridade=2;
       }
       else{
-        p->prioridade=5;
+        p->prioridade=1;
       }
     }
   }
