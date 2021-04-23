@@ -77,15 +77,9 @@ void perguntas(Pessoa *p){
 int main(void) {
 
   Fila fila1;
-  Fila fila2;
-  Fila fila3;
-  Fila fila4;
-  Fila fila5;
+
   new_fila(&fila1);
-  new_fila(&fila2);
-  new_fila(&fila3);
-  new_fila(&fila4);
-  new_fila(&fila5);
+
 
   int op = 0;
 
@@ -99,32 +93,7 @@ int main(void) {
       {
         Pessoa p;
         perguntas(&p);
-        switch(p.prioridade){
-          case 1:{
-            enqueue(&fila1, p);
-          }
-          break;
-
-          case 2:{
-            enqueue(&fila2, p);
-          }
-          break;
-
-          case 3:{
-            enqueue(&fila3, p);
-          }
-          break;
-
-          case 4:{
-            enqueue(&fila4, p);
-          }
-          break;
-
-          case 5:{
-            enqueue(&fila5, p);
-          }
-        }
- 
+        enqueue(&fila1, p);
       }
       break;
 
@@ -132,16 +101,7 @@ int main(void) {
       {
           Pessoa p = dequeue(&fila1);
           if(p.idade==-1){
-            p = dequeue(&fila2);
-            if(p.idade==-1){
-              p = dequeue(&fila3);
-              if(p.idade==-1){
-                p = dequeue(&fila4);
-                if(p.idade==-1){
-                  p = dequeue(&fila5);
-                }
-              }
-            }
+            printf("\n Fila vazia ");
           } 
           printf("\nPessoa removida: ");
           print_pessoa(p);
@@ -151,10 +111,6 @@ int main(void) {
 
       case 3:
         print_fila(&fila1);
-        print_fila(&fila2);
-        print_fila(&fila3);
-        print_fila(&fila4);
-        print_fila(&fila5);
       break;
 
       case 4: 
@@ -162,19 +118,19 @@ int main(void) {
       break;
       
       case 5: 
-        print_fila(&fila2);
+//        print_fila(&fila2);
       break;
 
       case 6: 
-        print_fila(&fila3);
+        //print_fila(&fila3);
       break;
 
       case 7: 
-        print_fila(&fila4);
+//        print_fila(&fila4);
       break;
 
       case 8: 
-        print_fila(&fila5);
+//        print_fila(&fila5);
       break;
 
     }

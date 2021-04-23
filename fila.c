@@ -20,16 +20,38 @@ void new_fila(Fila *f){
 }
 //========================================
 void enqueue(Fila *f, Pessoa dado){
-
+  Celula *temp=f->inicio->prox;
   Celula *nova = new_celula();
   nova->dado = dado;
+  if(dado.prioridade==5){ 
+    f->fim->prox = nova;
+    f->fim = nova;
+    f->tam++;
+  }
+  else{
+    while(dado.prioridade<=temp->prox->dado.prioridade){
+      temp=temp->prox;
+    }
+    nova->prox=temp->prox;
+    temp->prox=nova;
+    f->tam++;
 
-  f->fim->prox = nova;
-  f->fim = nova;
-  f->tam++;
+  }
+
 }
 //========================================
 void print_fila(Fila *f){
+
+  Celula *tmp = f->inicio->prox;
+
+  printf("\n"
+  while(tmp != NULL){
+    print_pessoa(tmp->dado);
+    tmp = tmp->prox;
+  }
+}
+
+void print_posfila(Fila *f, Pessoa p){
 
   Celula *tmp = f->inicio->prox;
 
