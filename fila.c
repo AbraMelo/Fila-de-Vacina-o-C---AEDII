@@ -29,7 +29,7 @@ void enqueue(Fila *f, Pessoa dado){
     f->tam++;
   }
   else{
-    while(dado.prioridade<=temp->dado.prioridade){
+    while(dado.prioridade>=temp->dado.prioridade){
       temp=temp->prox;
     }
     nova->prox=temp->prox;
