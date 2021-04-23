@@ -3,7 +3,7 @@
 
 **Motivação**: Sistema de filas para vacina do COVID-19<p>
 
-**Desenvolvimento**: Foram feitos testes 
+**Desenvolvimento**: Foram feitos testes durante todo o trabalho para verificar a fila de prioridade<p>
 
   
 # **Introdução** <h1>
