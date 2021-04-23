@@ -51,11 +51,12 @@ void print_fila(Fila *f){
   }
 }
 
+/*************************************
 void print_posfila(Fila *f){
 
   Celula *tmp = f->inicio->prox;
 
-  char nome[];
+  char nome[20];
   printf("Insira o nome\n");
   scanf("%s", nome);
 
@@ -64,6 +65,8 @@ void print_posfila(Fila *f){
     tmp = tmp->prox;
   }
 }
+******************************************/
+
 //========================================
 int size_fila(Fila *f){
   return f->tam;
