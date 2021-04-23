@@ -60,7 +60,7 @@ void print_posfila(Fila *f){
   printf("Insira o nome\n");
   scanf("%s", nome);
 
-  while(tmp != p.nome){
+  while(tmp->dado->nome != nome){
     print_pessoa(tmp->dado);
     tmp = tmp->prox;
   }
