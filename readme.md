@@ -50,7 +50,7 @@ Os critérios para encaixe nas respectivas filas de vacinação seguiram a propo
 
 O sistema foi implementado utilizando **Fila dinâmica**, por orientação do Professor, foi desenvolvido também utilizando **Fila estática**, que pode ser acessado pelo **link**: https://github.com/GabrielFOliveira/AED2-Fila_de_Vacinacao-Fila_com_Vetor
 
-A necessidade da utilização da estrutura de Fila com Prioridade vem pela observação da necessidade de inserir os elementos(struct Pessoa) dentro da estrutura de forma ordenada.
+A necessidade da utilização da estrutura de Fila com Prioridade vem pela observação da necessidade de inserir os elementos (struct Pessoa) dentro da estrutura de forma ordenada.
 
 Os testes feitos no trabalho se resumiram primeiramente numa lógica diferente da proposta, fazendo uma prioridade com a criação de 5 filas. No entanto, percebemos então que seria mais efetivo criamos um metodo de enfileirar com prioridade. Este método traz uma implementação em uma fila apenas e não repete a complexidade, tornando-o mais rápido.
 
