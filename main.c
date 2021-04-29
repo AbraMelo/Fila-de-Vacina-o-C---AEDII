@@ -11,7 +11,7 @@ Sistema para gerenciar uma Fila de Pessoas
 */
 
 
-
+//Função Menu que corresponde ao inicio do programa no console e retorna a opção do usuario
 int menu(){
   int opcao = 0;
   printf("\n =====> Fila de Vacinação  <=====\n");
@@ -29,24 +29,29 @@ int menu(){
   scanf("%d", &opcao);
   return opcao;
 }
-
+//Procedimento que recebe como parametro o objeto Pessoa e faz as perguntas ao usuario
 void perguntas(Pessoa *p){
+  //Perguntas
   p->prioridade=5;
   int resposta=0;
   printf(" Qual seu nome:\n");
   scanf("%s", p->nome);
   printf(" Qual sua idade: \n");
   scanf("%i", &p->idade);
+  //Saber se é prioritario ou não
   while(resposta!=1 && resposta!=2){
     printf(" Você é trabalhador da Saúde ou vive em instituição de longa permanência? \n Digite: \n 1 - Sim \n 2 - Não \n");
     scanf("%i", &resposta);
   }
+  //entra na prioridade fase 1
   if(resposta==1 || p->idade>=75){
     p->prioridade=1;
   }
+  //entra na prioridade fase 2
   else if(p->idade>60 && p->idade<75){
     p->prioridade=2;
   }
+  //entra na prioridade fase 3
   else{
     resposta=0;
     while(resposta!=1 && resposta!=2){
@@ -56,6 +61,7 @@ void perguntas(Pessoa *p){
     if(resposta==1){
       p->prioridade=3;
     }
+    //entra na prioridade fase 4
     else{
       resposta=0;
       while(resposta!=1 && resposta!=2){
@@ -76,19 +82,23 @@ void perguntas(Pessoa *p){
 
 int main(void) {
 
+  //Declaração da fila
   Fila fila1;
-
+  //Inicialização da nova fila
   new_fila(&fila1);
 
 
   int op = 0;
 
+  //Onde vai caber e imprimir cada fase prioritaria
   do{
+
 
     op = menu();
 
     switch(op){
 
+      //Enfileirar uma pessoa
       case 1:
       {
         Pessoa p;
@@ -97,6 +107,7 @@ int main(void) {
       }
       break;
 
+      //Desenfileirar uma pessoa
       case 2:
       {
           Pessoa p = dequeue(&fila1);
@@ -109,26 +120,27 @@ int main(void) {
               
       break;
 
+      //Imprimir fila geral
       case 3:
         print_fila(&fila1);
       break;
-
+      //Imprimir fila fase 1
       case 4: 
         print_fila_especifica(&fila1,1);
       break;
-      
+      //Imprimir fila fase 2
       case 5: 
         print_fila_especifica(&fila1,2);
       break;
-
+      //Imprimir fila 3
       case 6: 
         print_fila_especifica(&fila1,3);
       break;
-
+      //Imprimir fila fase 4
       case 7: 
         print_fila_especifica(&fila1,4);
       break;
-
+      //Imprimir fila fase 5
       case 8: 
         print_fila_especifica(&fila1,5);
       break;
