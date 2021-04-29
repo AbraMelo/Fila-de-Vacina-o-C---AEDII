@@ -1,4 +1,5 @@
 #include "fila.h"
+
 //Impelemntação do método print do tipo void que recebe como parametro um objeto Pessoa e retorna a impressão
 void print_pessoa(Pessoa p){
   printf("{nome: %s, idade: %d, fase: %d}\n", p.nome, p.idade, p.prioridade);
@@ -12,6 +13,7 @@ Celula *new_celula(){
   tmp->prox = NULL;
   return tmp;
 }
+
 //Implementação do metodo new fila do tipo void que recebe uma fila como paramentro e faz a criação de uma nova fila
 void new_fila(Fila *f){
   //atribuição de uma nova celula
@@ -22,6 +24,7 @@ void new_fila(Fila *f){
   //nova fila tem o tamanho 0
   f->tam = 0;
 }
+
 //Implementação do metodo enqueue do tipo void que recebe como paramtro uma fila e o dado de uma pessoa e adiciona uma pessoa na fila enfileirando-a
 void enqueue(Fila *f, Pessoa dado){
   //Declaração de duas variaveis do tipo celula
@@ -48,6 +51,7 @@ void enqueue(Fila *f, Pessoa dado){
   }
 
 }
+
 //Implementaçao do metodo print fila do tipo void que recebe uma fila como parametro e imprimi-a 
 void print_fila(Fila *f){
 
@@ -59,6 +63,7 @@ void print_fila(Fila *f){
     tmp = tmp->prox;
   }
 }
+
 //Implementação do metodo print fila especifica do tipo void que recebe uma fila como paramentro e um inteiro p
 void print_fila_especifica(Fila *f, int p){
 
@@ -73,27 +78,20 @@ void print_fila_especifica(Fila *f, int p){
   }
 }
 
-
-
-/*************************************
-void print_posfila(Fila *f){
+void print_posfila(Fila *f, char nome){
 
   Celula *tmp = f->inicio->prox;
 
-  char nome[20];
-  printf("Insira o nome\n");
-  scanf("%s", nome);
-
   int cont=0;
 
-  while(tmp->dado->nome != nome){
+  //celula temporaria não pode apontar para NULL
+  while(tmp != NULL && tmp->dado.nome!=nome){
+    tmp = tmp->prox;
     cont++;
   }
 
-  printf("Sua posicao na fila: \n", cont);
+   printf("posicao na fila : %d}", cont);
 }
-******************************************/
-
 //Implementação  do metodo size_fila que recebe uma fila como parametro e retorna o tamanho da fila
 int size_fila(Fila *f){
   return f->tam;

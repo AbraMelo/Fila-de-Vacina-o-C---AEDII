@@ -36,6 +36,9 @@ void print_fila_especifica(Fila *f, int p);
 //Assinatura do metodo para retornar o tamanho da fila
 int size_fila(Fila *f);
 //Assinatura do metodo para desinfileirar uma pessoa da fila
+
+void print_posfila(Fila *f, char nome);
+
 Pessoa dequeue(Fila *f);
 //========================================
 #endif 

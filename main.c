@@ -24,6 +24,7 @@ int menu(){
   printf(" 6 - Exibir a fila da fase 3\n");
   printf(" 7 - Exibir a fila da fase 4\n");
   printf(" 8 - Exibir a fila da fase 5\n");
+  printf(" 9 - Consultar posicao na fila \n");
   printf(" 0 - Sair\n");
   printf(" Digite a opcao desejada:\n ");
   scanf("%d", &opcao);
@@ -87,7 +88,7 @@ int main(void) {
   //Inicialização da nova fila
   new_fila(&fila1);
 
-
+  char n[100];
   int op = 0;
 
   //Onde vai caber e imprimir cada fase prioritaria
@@ -143,6 +144,12 @@ int main(void) {
       //Imprimir fila fase 5
       case 8: 
         print_fila_especifica(&fila1,5);
+      break;
+      case 9:
+        
+        printf("informe o nome");
+        scanf("%s", n);
+        print_posfila(&fila1, n);
       break;
 
     }
