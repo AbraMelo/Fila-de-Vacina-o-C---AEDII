@@ -2,8 +2,8 @@
 **Participantes**: 
 
 Abraão Melo Fagundes<p>
-Gabriel França de Oliveira, 
-Milleny Teixeira de Souza, 
+Gabriel França de Oliveira<p>
+Milleny Teixeira de Souza<p>
 
 Este Projeto foi desenvolvido para a disciplina Algoritimos e Estrututras de Dados II, lecionada pelo professor Kleber Jacques Ferreira De Souza no curso de Engenharia de Computação da PUC-Minas.
 
