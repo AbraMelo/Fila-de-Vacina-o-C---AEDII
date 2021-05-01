@@ -147,7 +147,7 @@ int main(void) {
       break;
       case 9:
         
-        printf("informe o nome");
+        printf("Informe o nome \n");
         scanf("%s", n);
         print_posfila(&fila1, n);
       break;

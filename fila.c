@@ -78,7 +78,7 @@ void print_fila_especifica(Fila *f, int p){
   }
 }
 
-void print_posfila(Fila *f, char nome){
+void print_posfila(Fila *f, char *nome){
 
   Celula *tmp = f->inicio->prox;
 
@@ -90,7 +90,7 @@ void print_posfila(Fila *f, char nome){
     cont++;
   }
 
-   printf("posicao na fila : %d}", cont);
+   printf("Posicao na fila : %d", cont);
 }
 //Implementação  do metodo size_fila que recebe uma fila como parametro e retorna o tamanho da fila
 int size_fila(Fila *f){
